@@ -1,12 +1,12 @@
-package com.store.runner;
+package com.stock.runner;
 
 import io.cucumber.junit.*;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/com/store/features",   // Path to feature files
-        glue = "com.store.steps",             // Path to step definition classes
+        features = "src/test/java/com/stock/features",   // Path to feature files
+        glue = "com.stock.steps",             // Path to step definition classes
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber.html",  // Change the HTML report path

@@ -1,4 +1,4 @@
-package com.store.utils;
+package com.stock.utils;
 
 import org.yaml.snakeyaml.Yaml;
 import java.io.InputStream;

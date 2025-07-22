@@ -88,7 +88,7 @@ Before running the tests, ensure that the following dependencies are installed:
 │   ├── main
 │   │   └── java
 │   │       └── com
-│   │           └── store
+│   │           └── stock
 │   │               ├── api
 │   │               │   ├── GlobalQuoteApi.java
 │   │               │   └── TimeSeriesDailyApi.java
@@ -105,7 +105,7 @@ Before running the tests, ensure that the following dependencies are installed:
 │   └── test
 │       └── java
 │           └── com
-│               └── store
+│               └── stock
 │                   ├── features
 │                   │   ├── GlobalQuote.feature
 │                   │   └── TimeSeriesDaily.feature

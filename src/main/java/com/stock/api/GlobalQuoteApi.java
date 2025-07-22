@@ -1,6 +1,6 @@
-package com.store.api;
+package com.stock.api;
 
-import com.store.utils.ConfigReader;
+import com.stock.utils.ConfigReader;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -9,19 +9,19 @@ import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 
-public class TimeSeriesDailyApi {
+public class GlobalQuoteApi {
 
     private static final String baseUri = ConfigReader.getBaseUrl(System.getProperty("env", "qa"));
-    private static final String timeSeriesDailyEndpoint = ConfigReader.getEndpoint("time_series", "daily");
+    private static final String quoteEndpoint = ConfigReader.getEndpoint("time_series", "quote");
 
     /**
-     * Get Time Series Daily data for a given symbol
+     *
      * @param symbol The stock symbol (e.g., "IBM")
      * @param apiKey The API key
      * @return Response object
      */
-    public static Response getTimeSeriesDaily(String symbol, String apiKey) {
-        String endpoint = timeSeriesDailyEndpoint
+    public static Response getGlobalQuote(String symbol, String apiKey) {
+        String endpoint = quoteEndpoint
                 .replace("{symbol}", symbol != null ? symbol : "")
                 .replace("{apikey}", apiKey != null ? apiKey : "");
 
@@ -31,15 +31,8 @@ public class TimeSeriesDailyApi {
                 .get(endpoint);
     }
 
-    /**
-     * Get Time Series Daily data with specific HTTP method (for testing different HTTP methods)
-     * @param symbol The stock symbol (e.g., "IBM")
-     * @param apiKey The API key
-     * @param method The HTTP method to use (GET, POST, PUT, DELETE, PATCH)
-     * @return Response object
-     */
-    public static Response getTimeSeriesDaily(String symbol, String apiKey, String method) {
-        String endpoint = timeSeriesDailyEndpoint
+    public static Response getGlobalQuote(String symbol, String apiKey, String method) {
+        String endpoint = quoteEndpoint
                 .replace("{symbol}", symbol != null ? symbol : "")
                 .replace("{apikey}", apiKey != null ? apiKey : "");
 
@@ -63,16 +56,16 @@ public class TimeSeriesDailyApi {
     }
 
     /**
-     * Get Time Series Daily data with optional parameters
+     *
      * @param symbol The stock symbol (e.g., "IBM")
      * @param apiKey The API key
-     * @param optionalParams Optional parameters such as "outputsize" (compact/full), "datatype" (json/csv)
+     * @param optionalParams Optional parameters such as "datatype"
      * @return Response object
      */
-    public static Response getTimeSeriesDaily(String symbol, String apiKey, Map<String, String> optionalParams) {
-        String endpoint = timeSeriesDailyEndpoint
-                .replace("{symbol}", symbol != null ? symbol : "")
-                .replace("{apikey}", apiKey != null ? apiKey : "");
+    public static Response getGlobalQuote(String symbol, String apiKey, Map<String, String> optionalParams) {
+        String endpoint = quoteEndpoint
+                .replace("{symbol}", symbol)
+                .replace("{apikey}", apiKey);
 
         // Build full URL
         StringBuilder fullUrlBuilder = new StringBuilder(endpoint);

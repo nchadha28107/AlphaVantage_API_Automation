@@ -1,4 +1,4 @@
-package com.store.model;
+package com.stock.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

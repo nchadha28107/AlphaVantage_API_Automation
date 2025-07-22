@@ -1,10 +1,10 @@
-package com.store.steps;
+package com.stock.steps;
 
-import com.store.api.GlobalQuoteApi;
-import com.store.enums.Context;
-import com.store.model.GlobalQuoteResponse;
-import com.store.utils.ConfigReader;
-import com.store.utils.ScenarioContext;
+import com.stock.api.GlobalQuoteApi;
+import com.stock.enums.Context;
+import com.stock.model.GlobalQuoteResponse;
+import com.stock.utils.ConfigReader;
+import com.stock.utils.ScenarioContext;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
 import java.util.HashMap;

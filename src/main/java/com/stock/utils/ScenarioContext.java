@@ -1,6 +1,6 @@
-package com.store.utils;
+package com.stock.utils;
 
-import com.store.enums.Context;
+import com.stock.enums.Context;
 
 import java.util.HashMap;
 import java.util.Map;

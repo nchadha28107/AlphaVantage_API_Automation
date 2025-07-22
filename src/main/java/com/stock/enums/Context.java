@@ -1,4 +1,4 @@
-package com.store.enums;
+package com.stock.enums;
 
 public enum Context {
     RESPONSE
