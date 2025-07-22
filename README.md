@@ -263,18 +263,6 @@ Tests are organized using comprehensive tagging:
 - **@positive**: Tests expecting successful API responses
 - **@negative**: Tests expecting API errors or failures
 
-### Usage Examples
-```bash
-# Run all Alpha Vantage tests
-mvn test -Dcucumber.filter.tags="@alphavantage"
-
-# Run only error handling tests
-mvn test -Dcucumber.filter.tags="@negative"
-
-# Run Global Quote positive tests only
-mvn test -Dcucumber.filter.tags="@globalquote and @positive"
-```
-
 ## Model Classes
 
 The framework includes well-structured model classes for API responses:
