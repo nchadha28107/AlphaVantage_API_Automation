@@ -1,0 +1,14 @@
+environments:
+  local:
+    base_url: "http://localhost:9090"
+  mock:
+    base_url: "https://mockapi.example.com"
+  qa:
+    base_url: "https://www.alphavantage.co"
+
+api:
+  key: "8U9P0PPNBK4O2MYI"
+
+time_series:
+  daily: "/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apikey}"
+  quote: "/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={apikey}"
